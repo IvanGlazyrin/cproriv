@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\v1\CommandController;
 use App\Http\Controllers\Api\v1\CommandTypeController;
 use App\Http\Controllers\Api\v1\EquipmentController;
 use App\Http\Controllers\Api\v1\RentalPointController;
+use App\Http\Controllers\Api\v1\MarkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,7 @@ Route::resource('command', CommandController::class);
 Route::resource('command-type', CommandTypeController::class);
 Route::resource('equipment', EquipmentController::class);
 Route::resource('rental-point', RentalPointController::class);
+Route::resource('mark', MarkController::class);
+// Route::resource('command-type', CommandTypeController::class);
+// Route::resource('equipment', EquipmentController::class);
+// Route::resource('rental-point', RentalPointController::class);

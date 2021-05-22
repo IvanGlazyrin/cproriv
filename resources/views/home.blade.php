@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-<map-component></map-component>
+<router-view></router-view>
 @endsection

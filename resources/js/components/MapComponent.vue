@@ -6,9 +6,19 @@
     @click="onClick"
   >
     <ymap-marker 
-      :coords="coords" 
-      marker-id="123" 
-      hint-content="some hint" 
+      v-for="rentalPointcoord in rentalPointcoords"
+      v-bind:key="rentalPointcoord.id"
+      v-bind:coords="[rentalPointcoord.latitude, rentalPointcoord.longitude]" 
+      v-bind:marker-id="rentalPointcoord.id" 
+      v-bind:hint-content="rentalPointcoord.name" 
+    />
+
+    <ymap-marker 
+      v-for="markCoord in markCoords"
+      v-bind:key="markCoord.id"
+      v-bind:coords="[markCoord.latitude, markCoord.longitude]" 
+      v-bind:marker-id="markCoord.id" 
+      v-bind:hint-content="markCoord.name" 
     />
   </yandex-map>
 </template>
@@ -28,14 +38,37 @@ export default {
     data: () => ({
     settings,
     coords: [
-      54.82896654088406,
-      39.831893822753904,
+      66.0969527,
+      76.6009385
     ],
+    // получение координат проката
+    rentalPointcoords: [],
+    // получение координаты меток
+    markCoords: [],
   }),
+  mounted() {
+    this.loadRentalPounts();
+    this.loadMarks();
+  },
   methods: {
     onClick(e) {
       this.coords = e.get('coords');
     },
+    loadMarks() {
+        axios.get('/api/mark').then(
+        res => {
+          this.markCoords = res.data;
+        }
+      )    
+    },
+    loadRentalPounts() {
+      axios.get('/api/rental-point').then(
+        res => {
+          this.rentalPointcoords = res.data;
+        }
+      )
+    }
   }, 
 }
 </script>
+;
