@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\v1;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\RentalPoint;
 
 class RentalPointController extends Controller
 {
@@ -13,7 +15,7 @@ class RentalPointController extends Controller
      */
     public function index()
     {
-        //
+        return RentalPoint::all();
     }
 
     /**
@@ -45,7 +47,7 @@ class RentalPointController extends Controller
      */
     public function show($id)
     {
-        //
+        return RentalPoint::findOrFail($id);
     }
 
     /**
