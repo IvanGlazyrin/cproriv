@@ -57,6 +57,10 @@
                                     {{ __('Логин') }}
                                 </button>
 
+                                <a href="{{ route('auth.social', 'facebook') }}" title="Facebook">
+                                    <i class="fa fa-2x fa-facebook-square"></i>
+                                </a>
+
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Забыли ваш пароль?') }}
