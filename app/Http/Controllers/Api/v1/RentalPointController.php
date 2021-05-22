@@ -36,7 +36,7 @@ class RentalPointController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Product::create($request->all());
     }
 
     /**
@@ -70,7 +70,9 @@ class RentalPointController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $rentaiPoint = RentalPoint::findOrFail($id);
+        $rentaiPoint->update($request->all());
+        return $rentaiPoint;
     }
 
     /**
@@ -81,6 +83,6 @@ class RentalPointController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return RentalPoint::destroy($id);
     }
 }
