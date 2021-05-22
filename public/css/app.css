@@ -10005,3 +10005,21 @@ h3 {
 .ymap-container {
   height: 500px !important;
 }
+
+body {
+  padding-top: 56px;
+  /* Отступ сверху для фиксированного меню */
+}
+
+.carousel-item {
+  /* Параметры слайдера на главной странице */
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  background-size: cover;
+}
+
+.portfolio-item {
+  /* Отступы между карточками class="card" */
+  margin-bottom: 30px;
+}
