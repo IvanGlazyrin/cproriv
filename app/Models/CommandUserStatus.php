@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class CommandUserStatus extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name'
+    ];
 }

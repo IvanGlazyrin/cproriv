@@ -13,6 +13,6 @@ class RentalPoint extends Model
         'name',
         'number_of_seats',
         'latitude',
-        '   '
+        'longitude'
     ];
 }

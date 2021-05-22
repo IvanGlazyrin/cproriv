@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\v1;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Command;
 
 class CommandController extends Controller
 {
@@ -14,7 +15,7 @@ class CommandController extends Controller
      */
     public function index()
     {
-        //
+        return Command::all();
     }
 
     /**
@@ -35,7 +36,7 @@ class CommandController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Command::create($request->all());
     }
 
     /**
@@ -46,7 +47,7 @@ class CommandController extends Controller
      */
     public function show($id)
     {
-        //
+        return Command::findOrFail($id);
     }
 
     /**
@@ -69,7 +70,9 @@ class CommandController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $command = Command::findOrFail($id);
+        $command->update($request->all());
+        return $command;
     }
 
     /**
@@ -80,6 +83,6 @@ class CommandController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return Command::destroy($id);
     }
 }
