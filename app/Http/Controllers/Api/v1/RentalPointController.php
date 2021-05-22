@@ -36,7 +36,7 @@ class RentalPointController extends Controller
      */
     public function store(Request $request)
     {
-        return Product::create($request->all());
+        return RentalPoint::create($request->all());
     }
 
     /**

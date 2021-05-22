@@ -15,6 +15,7 @@ use App\Http\Controllers\Auth\SocialController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/map', [HomeController::class, 'map'])->name('map');
 
 Auth::routes();
 

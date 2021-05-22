@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\v1;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Equipment;
 
 class EquipmentController extends Controller
 {
@@ -14,7 +15,7 @@ class EquipmentController extends Controller
      */
     public function index()
     {
-        //
+        return Equipment::all();
     }
 
     /**
@@ -24,7 +25,7 @@ class EquipmentController extends Controller
      */
     public function create()
     {
-        //
+        return Equipment::create($request->all());
     }
 
     /**
@@ -46,7 +47,7 @@ class EquipmentController extends Controller
      */
     public function show($id)
     {
-        //
+        return Equipment::findOrFail($id);
     }
 
     /**
@@ -69,7 +70,9 @@ class EquipmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $equipment = Equipment::findOrFail($id);
+        $equipment->update($request->all());
+        return $equipment;
     }
 
     /**
@@ -80,6 +83,6 @@ class EquipmentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return Equipment::destroy($id);
     }
 }

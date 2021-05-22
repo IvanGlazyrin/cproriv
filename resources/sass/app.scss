@@ -1,8 +1,30 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+.ymap-container {
+    height: 500px !important;
+}
+
+body {
+    padding-top: 56px;
+    /* Отступ сверху для фиксированного меню */
+}
+
+.carousel-item {
+    /* Параметры слайдера на главной странице */
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.portfolio-item {
+    /* Отступы между карточками class="card" */
+    margin-bottom: 30px;
+}
