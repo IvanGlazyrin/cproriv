@@ -68,6 +68,8 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'passport_number' => $data['passport_number'],
+            'passport_serial_number' => $data['passport_serial_number']
         ]);
     }
 }

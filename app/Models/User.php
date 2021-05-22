@@ -20,6 +20,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'passport_number',
+        'passport_serial_number'
     ];
 
     /**
