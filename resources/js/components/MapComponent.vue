@@ -7,17 +7,17 @@
   >
     <ymap-marker 
       v-for="rentalPointcoord in rentalPointcoords"
-      v-bind:key="rentalPointcoord.id"
+      v-bind:key="rentalPointcoord.id+'rentalPoint'"
       v-bind:coords="[rentalPointcoord.latitude, rentalPointcoord.longitude]" 
-      v-bind:marker-id="rentalPointcoord.id" 
+      v-bind:marker-id="rentalPointcoord.id+'rentalPoint'" 
       v-bind:hint-content="rentalPointcoord.name" 
     />
 
     <ymap-marker 
       v-for="markCoord in markCoords"
-      v-bind:key="markCoord.id"
+      v-bind:key="markCoord.id+'mark'" 
       v-bind:coords="[markCoord.latitude, markCoord.longitude]" 
-      v-bind:marker-id="markCoord.id" 
+      v-bind:marker-id="markCoord.id+'mark'"  
       v-bind:hint-content="markCoord.name" 
     />
   </yandex-map>
