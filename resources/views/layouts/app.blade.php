@@ -56,16 +56,16 @@
                             </li>
                             @endif @else
                             <li class="nav-item">
-                                <a class="nav-link" href="winter.html">Зимний сезон</a>
+                                <a class="nav-link" href="/winter">Зимний сезон</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="summer.html">Летний сезон</a>
+                                <a class="nav-link" href="/summer">Летний сезон</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="comand.html">Группа</a>
+                                <a class="nav-link" href="/command">Группа</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="stadion.html">Спортивные объекты</a>
+                                <a class="nav-link" href="/object">Спортивные объекты</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -78,7 +78,7 @@
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('ВЫход') }}
+                                        {{ __('Выход') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

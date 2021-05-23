@@ -9,11 +9,18 @@
           <label for="date">Бронь на:</label>
           <input type="date" class="form-control" id="dt_bgn">
         </div>
+
+        <div class="form-group">
+          <label for="date">Бронь на:</label>
+          <select name="rent_point" id="1">
+              <option value="1">Парковка 1</option>
+          </select>
+        </div>
   
         <div class="form-group">
           <label>Стоимость поездки в час: 100р</label>
         </div>
-        <button type="submit" class="btn btn-primary">Бронь</button>
+        <button type="submit" class="btn btn-primary">Забронировать</button>
       </form>
     </div>
     <map-component></map-component>

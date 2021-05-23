@@ -5,6 +5,8 @@ Vue.use(VueRouter);
 
 import Index from "./views/Index";
 import Profile from "./views/Profile";
+import SummerSeason from "./views/SummerSeason";
+import WinterSeason from "./views/WinterSeason";
 
 const routes = [{
         path: "/",
@@ -13,6 +15,14 @@ const routes = [{
     {
         path: "/profile",
         component: Profile
+    },
+    {
+        path: "/summer",
+        component: SummerSeason
+    },
+    {
+        path: "/winter",
+        component: WinterSeason
     }
 ];
 
