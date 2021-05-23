@@ -7,6 +7,7 @@ import Index from "./views/Index";
 import Profile from "./views/Profile";
 import SummerSeason from "./views/SummerSeason";
 import WinterSeason from "./views/WinterSeason";
+import AddMark from "./views/AddMark";
 
 const routes = [{
         path: "/",
@@ -23,6 +24,10 @@ const routes = [{
     {
         path: "/winter",
         component: WinterSeason
+    },
+    {
+        path: "/addmark",
+        component: AddMark
     }
 ];
 
